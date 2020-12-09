@@ -281,9 +281,9 @@ dependencies = [
 
 [[package]]
 name = "async-sqlx-session"
-version = "0.2.0"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bf95404b3deed3c55b22ec8dffe85e94ade9166e65c923270ddfdfe637a63b9f"
+checksum = "a16775c88b2a6ca66841162b97200726e77c8fde800cd1d4172e4d229a0d2558"
 dependencies = [
  "async-session",
  "async-std",
@@ -1028,7 +1028,7 @@ checksum = "db65c6da02e61f55dae90a0ae427b2a5f6b3e8db09f58d10efab23af92592616"
 dependencies = [
  "arrayvec",
  "bitflags",
- "cfg-if",
+ "cfg-if 0.1.10",
  "ryu",
  "static_assertions",
 ]
