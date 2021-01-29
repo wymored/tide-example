@@ -134,7 +134,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc33aa55416780ae3a9c5bfe3501fde0b992cccbb2c3c9e64d88a0764e151300"
 dependencies = [
  "askama",
- "tide",
+ "tide 0.14.0",
 ]
 
 [[package]]
@@ -635,6 +635,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "ctor"
+version = "0.1.16"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7fbaabec2c953050352311293be5c6aba8e141ba19d6811862b232d6fd020484"
+dependencies = [
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "data-encoding"
 version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1028,7 +1038,7 @@ checksum = "db65c6da02e61f55dae90a0ae427b2a5f6b3e8db09f58d10efab23af92592616"
 dependencies = [
  "arrayvec",
  "bitflags",
- "cfg-if",
+ "cfg-if 0.1.10",
  "ryu",
  "static_assertions",
 ]
@@ -1052,11 +1062,12 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.11"
+version = "0.4.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4fabed175da42fed1fa0746b0ea71f412aa9d35e76e95e59b192c64b9dc2bf8b"
+checksum = "51b9bbe6c47d51fc3e1a9b945965946b4c44142ab8792c50835a980d362c2710"
 dependencies = [
- "cfg-if 0.1.10",
+ "cfg-if 1.0.0",
+ "value-bag",
 ]
 
 [[package]]
@@ -1708,6 +1719,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "343f3f510c2915908f155e94f17220b19ccfacf2a64a2a5d8004f2c3e311e7fd"
 
 [[package]]
+name = "sval"
+version = "1.0.0-alpha.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "45f6ee7c7b87caf59549e9fe45d6a69c75c8019e79e212a835c5da0e92f0ba08"
+
+[[package]]
 name = "syn"
 version = "1.0.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1773,6 +1790,26 @@ version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "457aa92965e7219a7444b2891ba970136cdf07217cea5591c15f981635800336"
 dependencies = [
+ "async-sse",
+ "async-std",
+ "async-trait",
+ "futures-util",
+ "http-client",
+ "http-types",
+ "kv-log-macro",
+ "log",
+ "pin-project-lite 0.1.10",
+ "route-recognizer",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "tide"
+version = "0.15.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8889753e7e7b9d1ceb7a67e7df8c3994b4657082219d78eb379f71fe2934e66b"
+dependencies = [
  "async-h1",
  "async-session",
  "async-sse",
@@ -1801,7 +1838,7 @@ dependencies = [
  "serde",
  "serde_urlencoded",
  "sqlx",
- "tide",
+ "tide 0.15.1",
 ]
 
 [[package]]
@@ -1924,6 +1961,16 @@ dependencies = [
  "matches",
  "percent-encoding",
  "serde",
+]
+
+[[package]]
+name = "value-bag"
+version = "1.0.0-alpha.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6b676010e055c99033117c2343b33a40a30b91fecd6c49055ac9cd2d6c305ab1"
+dependencies = [
+ "ctor",
+ "sval",
 ]
 
 [[package]]
